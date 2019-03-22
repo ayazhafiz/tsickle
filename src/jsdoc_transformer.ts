@@ -446,9 +446,7 @@ export function jsdocTransformer(
         }
 
         maybeAddTemplateClause(mjsdoc.tags, classDecl);
-        if (!host.untyped) {
-          maybeAddHeritageClauses(mjsdoc.tags, moduleTypeTranslator, classDecl);
-        }
+        maybeAddHeritageClauses(mjsdoc.tags, moduleTypeTranslator, classDecl);
         mjsdoc.updateComment();
         const decls: ts.Statement[] = [];
         const memberDecl = createMemberTypeDeclaration(moduleTypeTranslator, classDecl);

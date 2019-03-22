@@ -17,7 +17,7 @@
     "source-map": "^0.7.3"
   },
   "peerDependencies": {
-    "typescript": "~3.3.1"
+    "typescript": "file:../TypeScript"
   },
   "devDependencies": {
     "@bazel/typescript": "^0.24.1",
@@ -35,7 +35,7 @@
     "prettier": "1.14.0",
     "source-map-support": "^0.5.6",
     "tslint": "5.11.0",
-    "typescript": "Microsoft/TypeScript#compilerPluginModel"
+    "typescript": "file:../TypeScript"
   },
   "scripts": {
     "build": "bazel build //:npm_package",

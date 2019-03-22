@@ -208,7 +208,7 @@ function stringCompare(a: string, b: string): number {
  * naming conventions, so we need to provide aliases for all the exported symbols
  * in the Clutz naming convention.
  */
-function addClutzAliases(
+export function addClutzAliases(
     dtsFileContent: string, sourceFile: ts.SourceFile, typeChecker: ts.TypeChecker,
     host: TsickleHost): string {
   const moduleSymbol = typeChecker.getSymbolAtLocation(sourceFile);
@@ -331,7 +331,7 @@ function addClutzAliases(
   return dtsFileContent;
 }
 
-function skipTransformForSourceFileIfNeeded(
+export function skipTransformForSourceFileIfNeeded(
     host: TsickleHost,
     delegateFactory: ts.TransformerFactory<ts.SourceFile>): ts.TransformerFactory<ts.SourceFile> {
   return (context: ts.TransformationContext) => {
